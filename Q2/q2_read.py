@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import csv
 
-def show_frequency(list):
+def show_frequency(list, name):
     plt.subplot(2,2,1)
     plt.hist(list[0], bins = 6, color = 'skyblue', label=name[0])
     plt.xlabel('dice number')
@@ -81,8 +81,8 @@ def main():
 
     list[3] = sum(list[3:], [])
 
-    show_frequency(list)
-#    show_prob(list)
+    show_frequency(list, name)
+    show_prob(list)
     
 
     
